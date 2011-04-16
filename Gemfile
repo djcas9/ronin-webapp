@@ -1,6 +1,10 @@
 source :rubygems
 
+RONIN_URL = 'http://github.com/ronin-ruby'
+
 gemspec
+
+gem 'ronin', '~> 1.0.1', :git => "#{RONIN_URL}/ronin.git"
 
 # Component requirements
 
