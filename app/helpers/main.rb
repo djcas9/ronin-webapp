@@ -46,3 +46,19 @@ end
 def render_email_address(email)
   partial('email_addresses/email_address', :object => email)
 end
+
+def render_url(url)
+  partial('urls/url', :object => url)
+end
+
+def render_credential(cred)
+  partial('credentials/credential', :object => cred)
+end
+
+def render_service_credential(cred)
+  partial('service_credentials/service_credential', :object => cred)
+end
+
+def render_web_credential(cred)
+  partial('web_credentials/web_credential', :object => cred)
+end
