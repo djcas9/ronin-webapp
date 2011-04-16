@@ -1,4 +1,4 @@
-def address_partial(address)
+def render_address(address)
   template = case address
              when Ronin::MACAddress
                'mac_addresses/mac_address'
