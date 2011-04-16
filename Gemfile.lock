@@ -30,13 +30,6 @@ GIT
       thor (~> 0.14.3)
       uri-query_params (>= 0.5.2, ~> 0.5)
 
-PATH
-  remote: .
-  specs:
-    ronin-webapp (0.1.0)
-      padrino (~> 0.9.23)
-      rack-flash (~> 0.1)
-
 GEM
   remote: http://rubygems.org/
   specs:
@@ -187,10 +180,10 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bundler (~> 1.0.10)
   ore-tasks (~> 0.4)
+  padrino (~> 0.9.23)
+  rack-flash (~> 0.1)
   rack-test (~> 0.5.7)
   rake (~> 0.8.7)
   ronin (~> 1.0.1)!
-  ronin-webapp!
   rspec (~> 2.4)
