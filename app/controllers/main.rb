@@ -4,8 +4,8 @@ Ronin::WebApp.controller do
     render 'main/index'
   end
 
-  get :version do
-    render 'main/version'
+  get :about do
+    render 'main/about'
   end
 
 end
