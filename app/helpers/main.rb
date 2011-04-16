@@ -23,6 +23,25 @@ def render_host_name(host)
   partial('host_names/host_name', :object => host)
 end
 
+def render_address(address)
+  case address
+  when Ronin::MACAddress
+    render_mac_address(address)
+  when Ronin::IPAddress
+    render_ip_address(address)
+  when Ronin::HostName
+    render_host_name(address)
+  end
+end
+
+def render_os(os)
+  partial('oses/os', :object => os)
+end
+
+def render_os_guess(guess)
+  partial('os_guesses/os_guess', :object => os)
+end
+
 def render_open_port(open_port)
   partial('open_ports/open_port', :object => open_port)
 end
