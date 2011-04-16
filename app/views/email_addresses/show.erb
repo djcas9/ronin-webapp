@@ -1,0 +1,28 @@
+<h3><%= @email_address %></h3>
+
+<ul>
+  <li>
+  <span>User:</span>
+  <%= render_user_name(@email_address.user_name) %>
+  </li>
+
+  <li>
+  <span>Domain:</span>
+  <%= render_host_name(@email_address.host_name) %>
+  </li>
+
+  <li>
+  <span>Created:</span>
+  <%= @email_address.created_at %>
+  </li>
+
+  <% unless @email_address.web_credentials.empty? %>
+  <li>
+    <p>Web Credentials:</p>
+
+    <% @email_address.web_credentials.each do |cred| %>
+      <%= render_web_credential(cred) %>
+    <% end %>
+  </li>
+  <% end %>
+</ul>
