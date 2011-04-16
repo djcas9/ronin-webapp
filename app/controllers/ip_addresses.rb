@@ -1,5 +1,3 @@
-require 'ronin/ip_address'
-
 Ronin::WebApp.controllers :ip_addresses do
 
   provides :html, :xml, :yaml, :json

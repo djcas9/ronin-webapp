@@ -1,5 +1,3 @@
-require 'ronin/host_name'
-
 Ronin::WebApp.controllers :host_names do
 
   provides :html, :xml, :yaml, :json
