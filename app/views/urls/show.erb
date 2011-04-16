@@ -1,0 +1,36 @@
+<h3><%= @url %></h3>
+
+<ul>
+  <li><span>Scheme:</span> <%= @url.scheme %></li>
+  <li><span>Domain:</span> <%= render_host_name(@url.host_name) %></li>
+  <li><span>Port:</span> <%= render_port(@url.port) %></li>
+  <li><span>Path:</span> <%= @url.path %></li>
+
+  <% if @url.fragment %>
+  <li><span>Fragment:</span> <%= @url.fragment %></li>
+  <% end %>
+
+  <% if @url.last_scanned_at %>
+  <li><span>Last Scanned:</span> <%= @url.last_scanned_at %></li>
+  <% end %>
+
+  <li><span>Created:</span> <%= @url.created_at %></li>
+</ul>
+
+<% unless @url.query_params.empty? %>
+  <h4>Query Params</h4>
+
+  <ul>
+  <% @url.query_params.each do |query_param| %>
+    <li><%= query_param.name %>: <%= query_param.value %></li>
+  <% end %>
+  </ul>
+<% end %>
+
+<% unless @url.web_credentials.empty? %>
+  <h4>Web Credentials</h4>
+
+  <% @url.web_credentials.each do |cred| %>
+    <%= render_web_credentials(cred) %>
+  <% end %>
+<% end %>
