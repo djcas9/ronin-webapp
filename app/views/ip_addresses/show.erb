@@ -10,7 +10,7 @@
       <ul>
         <% @ip_address.mac_addresses.each do |mac_address| %>
         <li>
-          <%= partial('mac_addresses/mac_address', :object => mac_address) %>
+          <%= render_mac_address(mac_address) %>
         </li>
         <% end %>
       </ul>
@@ -23,7 +23,7 @@
       <ul>
         <% @ip_address.host_names.each do |host_name| %>
         <li>
-          <%= partial('host_names/host_name', :object => host_name) %>
+          <%= render_host_name(host_name) %>
         </li>
         <% end %>
       </ul>
@@ -36,7 +36,7 @@
       <ul>
         <% @ip_address.os_guesses.each do |os_guess| %>
         <li>
-          <%= partial('os_guesses/os_guess', :object => os_guess) %>
+          <%= render_os_guess(os_guess) %>
         </li>
         <% end %>
       </ul>
@@ -49,7 +49,7 @@
       <ul>
         <% @ip_address.open_ports.each do |open_port| %>
         <li>
-          <%= partial('open_ports/open_port', :object => open_port) %>
+          <%= render_open_port(open_port) %>
         </li>
         <% end %>
       </ul>

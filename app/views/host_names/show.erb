@@ -7,7 +7,7 @@
     <ul>
       <% @host_name.ip_addresses.each do |ip_address| %>
         <li>
-        <%= partial('ip_addresses/ip_address', :object => ip_address) %>
+        <%= render_ip_address(ip_address) %>
         </li>
       <% end %>    
     </ul>
@@ -20,7 +20,7 @@
     <ul>
       <% @host_name.email_addresses.each do |email_address| %>
         <li>
-        <%= partial('email_addresses/email_address', :object => email_address) %>
+        <%= render_email_address(email_address) %>
         </li>
       <% end %>    
     </ul>

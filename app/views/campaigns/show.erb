@@ -5,7 +5,7 @@
     <li>
       <p>Description:</p>
       <blockquote>
-        <%= @campaign.description %>
+        <%=h @campaign.description %>
       </blockquote>
     </li>
 
@@ -18,7 +18,7 @@
       <ul>
         <% @campaign.addresses.each do |address| %>
           <li>
-          <%= address_partial(address) %>
+          <%= render_address(address) %>
           </li>
         <% end %>
       </ul>

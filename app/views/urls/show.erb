@@ -1,13 +1,13 @@
 <h3><%= @url %></h3>
 
 <ul>
-  <li><span>Scheme:</span> <%= @url.scheme %></li>
+  <li><span>Scheme:</span> <%=h @url.scheme %></li>
   <li><span>Domain:</span> <%= render_host_name(@url.host_name) %></li>
   <li><span>Port:</span> <%= render_port(@url.port) %></li>
-  <li><span>Path:</span> <%= @url.path %></li>
+  <li><span>Path:</span> <%=h @url.path %></li>
 
   <% if @url.fragment %>
-  <li><span>Fragment:</span> <%= @url.fragment %></li>
+  <li><span>Fragment:</span> <%=h @url.fragment %></li>
   <% end %>
 
   <% if @url.last_scanned_at %>
@@ -22,7 +22,10 @@
 
   <ul>
   <% @url.query_params.each do |query_param| %>
-    <li><%= query_param.name %>: <%= query_param.value %></li>
+    <li>
+      <kbd><%=h query_param.name %></kbd>:
+      <kbd><%=h query_param.value %></kbd>
+    </li>
   <% end %>
   </ul>
 <% end %>
