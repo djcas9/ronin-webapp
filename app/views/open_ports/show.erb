@@ -1,0 +1,30 @@
+<h3><%= @open_port %></h3>
+
+<ul>
+  <li>
+    <p>IP Address:</p>
+    <%= render_address @open_port.ip_address %>
+  </li>
+
+  <li>
+    <p>Port:</p>
+    <%= render_port @open_port.port %>
+  </li>
+
+  <% if @open_port.service %>
+  <li>
+    <p>Service:</p>
+    <%= render_service @open_port.service %>
+  </li>
+  <% end %>
+
+  <% if @open_port.last_scanned_at %>
+  <li>
+    <span>Last Scanned:</span> <%= @open_port.last_scanned_at %>
+  </li>
+  <% end %>
+
+  <li>
+    <span>Created:</span> <%= @open_port.created_at %>
+  </li>
+</ul>

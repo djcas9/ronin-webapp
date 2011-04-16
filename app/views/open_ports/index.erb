@@ -1,0 +1,5 @@
+<h3>Open Ports</h3>
+
+<% @open_ports.each do |open_port| %>
+  <%= partial('open_ports/open_port', :object => open_port) %>
+<% end %>
