@@ -2,6 +2,16 @@
 
 <div id="campaign">
   <ul>
+    <li>
+      <p>Description:</p>
+      <blockquote>
+        <%= @campaign.description %>
+      </blockquote>
+    </li>
+
+    <li><span>Created:</span> <%= @campaign.created_at %></li>
+    <li><span>Updated:</span> <%= @campaign.updated_at %></li>
+
     <% unless @campaign.targets.empty? %>
     <li>
       <p>Targets:</p>
@@ -14,12 +24,5 @@
       </ul>
     </li>
     <% end %>
-
-    <li>
-      <p>Description:</p>
-      <blockquote>
-        <%= @campaign.description %>
-      </blockquote>
-    </li>
   </ul>
 </div>
