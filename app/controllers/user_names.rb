@@ -1,4 +1,4 @@
-Ronin::WebApp.controllers :user_names do
+App.controllers :user_names do
 
   provides :html, :xml, :yaml, :json
 

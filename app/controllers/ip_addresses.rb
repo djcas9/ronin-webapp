@@ -1,4 +1,4 @@
-Ronin::WebApp.controllers :ip_addresses do
+App.controllers :ip_addresses do
 
   provides :html, :xml, :yaml, :json
 

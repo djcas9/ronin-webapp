@@ -1,4 +1,4 @@
-Ronin::WebApp.controllers :open_ports do
+App.controllers :open_ports do
 
   provides :html, :xml, :yaml, :json
 

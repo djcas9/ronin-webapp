@@ -1,4 +1,4 @@
-Ronin::WebApp.controllers :campaigns do
+App.controllers :campaigns do
 
   provides :html, :xml, :yaml, :json
 

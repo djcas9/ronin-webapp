@@ -1,4 +1,4 @@
-Ronin::WebApp.controllers :passwords do
+App.controllers :passwords do
 
   provides :html, :xml, :yaml, :json
 

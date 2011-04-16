@@ -1,4 +1,4 @@
-Ronin::WebApp.controller do
+App.controller do
 
   get :index do
     render 'main/index'

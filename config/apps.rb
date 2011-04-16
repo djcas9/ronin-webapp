@@ -22,4 +22,9 @@
 #
 
 # Mounts the core application for this project
-Padrino.mount("Ronin::WebApp").to('/')
+Padrino.mount('app').to('/')
+
+Padrino.mount('asm', :app_class => 'ASMApp').to('/asm')
+Padrino.mount('web', :app_class => 'WebApp').to('/web')
+Padrino.mount('exploits', :app_class => 'ExploitsApp').to('/exploits')
+Padrino.mount('scanners', :app_class => 'ScannersApp').to('/scanners')

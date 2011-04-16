@@ -1,4 +1,4 @@
-Ronin::WebApp.controllers :email_addresses do
+App.controllers :email_addresses do
 
   provides :html, :xml, :yaml, :json
 

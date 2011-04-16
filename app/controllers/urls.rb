@@ -1,4 +1,4 @@
-Ronin::WebApp.controllers :urls do
+App.controllers :urls do
 
   provides :html, :xml, :yaml, :json
 

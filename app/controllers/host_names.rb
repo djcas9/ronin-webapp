@@ -1,4 +1,4 @@
-Ronin::WebApp.controllers :host_names do
+App.controllers :host_names do
 
   provides :html, :xml, :yaml, :json
 
