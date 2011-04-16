@@ -1,0 +1,61 @@
+<div id="ip_address">
+  <h3><%= @ip_address %></h3>
+
+  <ul>
+    <li>IPv<%= @ip_address.version %></li>
+
+    <% unless @ip_address.mac_addresses.empty? %>
+    <li>
+      <p>MAC Addresses:</p>
+      <ul>
+        <% @ip_address.mac_addresses.each do |mac_address| %>
+        <li>
+          <%= partial('mac_addresses/mac_address', :object => mac_address) %>
+        </li>
+        <% end %>
+      </ul>
+    </li>
+    <% end %>
+
+    <% unless @ip_address.host_names.empty? %>
+    <li>
+      <p>Host Names:</p>
+      <ul>
+        <% @ip_address.host_names.each do |host_name| %>
+        <li>
+          <%= partial('host_names/host_name', :object => host_name) %>
+        </li>
+        <% end %>
+      </ul>
+    </li>
+    <% end %>
+
+    <% unless @ip_address.os_guesses.empty? %>
+    <li>
+      <p>OS Guesses:</p>
+      <ul>
+        <% @ip_address.os_guesses.each do |os_guess| %>
+        <li>
+          <%= partial('os_guesses/os_guess', :object => os_guess) %>
+        </li>
+        <% end %>
+      </ul>
+    </li>
+    <% end %>
+
+    <% unless @ip_address.open_ports.empty? %>
+    <li>
+      <p>Open Ports:</p>
+      <ul>
+        <% @ip_address.open_ports.each do |open_port| %>
+        <li>
+          <%= partial('open_ports/open_port', :object => open_port) %>
+        </li>
+        <% end %>
+      </ul>
+    </li>
+    <% end %>
+
+    <li><span>Created:</span> <%= @ip_address.created_at %></li>
+  </ul>
+</div>

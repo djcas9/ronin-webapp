@@ -1,0 +1,12 @@
+<h3>Version</h3>
+
+<p><%= RUBY_ENGINE.capitalize %> <%= RUBY_VERSION %></p>
+<p>Ronin <%= Ronin::VERSION %></p>
+
+<h4>Ronin Libraries</h4>
+
+<ul>
+<% Ronin::Installation.libraries.each do |lib| %>
+  <li><%= lib %></li>
+<% end %>
+</ul>

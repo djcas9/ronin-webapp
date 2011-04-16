@@ -1,0 +1,9 @@
+<h3>Campaigns</h3>
+
+<ul>
+  <% @campaigns.each do |campaign| %>
+  <li>
+    <%= partial('campaigns/campaign', :object => campaign) %>
+  </li>
+  <% end %>
+</ul>

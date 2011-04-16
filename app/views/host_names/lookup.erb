@@ -1,0 +1,7 @@
+<% form_tag('/host_names/resolv') do %>
+  <p>
+  <span>Host Name:</span> <%= text_field_tag(:host_name) %>
+  </p>
+
+  <p><%= submit_tag %></p>
+<% end %>

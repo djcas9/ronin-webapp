@@ -1,0 +1,25 @@
+<h3><%= @campaign %></h3>
+
+<div id="campaign">
+  <ul>
+    <% unless @campaign.targets.empty? %>
+    <li>
+      <p>Targets:</p>
+      <ul>
+        <% @campaign.addresses.each do |address| %>
+          <li>
+          <%= address_partial(address) %>
+          </li>
+        <% end %>
+      </ul>
+    </li>
+    <% end %>
+
+    <li>
+      <p>Description:</p>
+      <blockquote>
+        <%= @campaign.description %>
+      </blockquote>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>Ronin <%= Ronin::VERSION %></title>
+  </head>
+
+  <body>
+    <div id="container">
+      <div id="header">
+      </div>
+
+      <div class="flash">
+        <% [:error, :warning, :notice].each do |type| %>
+          <%= flash_tag(type, :class => "message #{type}") %>
+        <% end %>
+      </div>
+
+      <div id="content">
+        <%= yield %>
+      </div>
+    </div>
+  </body>
+</html>

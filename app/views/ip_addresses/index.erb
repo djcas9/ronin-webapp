@@ -1,0 +1,5 @@
+<h3>IP Addresses</h3>
+
+<% @ip_addresses.each do |ip_address| %>
+  <%= partial('ip_addresses/ip_address', :object => ip_address) %>
+<% end %>

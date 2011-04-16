@@ -1,0 +1,5 @@
+<h3>Host Names</h3>
+
+<% @host_names.each do |host_name| %>
+  <%= partial('host_names/host_name', :object => host_name) %>
+<% end %>
