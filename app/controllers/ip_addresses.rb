@@ -1,3 +1,5 @@
+require 'ronin/ip_address'
+
 App.controllers :ip_addresses do
 
   provides :html, :xml, :yaml, :json

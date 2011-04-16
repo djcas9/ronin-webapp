@@ -1,3 +1,5 @@
+require 'ronin/email_address'
+
 App.controllers :email_addresses do
 
   provides :html, :xml, :yaml, :json

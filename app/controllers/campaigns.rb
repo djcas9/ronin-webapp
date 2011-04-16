@@ -1,3 +1,5 @@
+require 'ronin/campaign'
+
 App.controllers :campaigns do
 
   provides :html, :xml, :yaml, :json

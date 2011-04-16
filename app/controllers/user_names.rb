@@ -1,3 +1,5 @@
+require 'ronin/user_name'
+
 App.controllers :user_names do
 
   provides :html, :xml, :yaml, :json

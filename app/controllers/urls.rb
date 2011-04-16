@@ -1,3 +1,5 @@
+require 'ronin/url'
+
 App.controllers :urls do
 
   provides :html, :xml, :yaml, :json

@@ -1,3 +1,5 @@
+require 'ronin/host_name'
+
 App.controllers :host_names do
 
   provides :html, :xml, :yaml, :json

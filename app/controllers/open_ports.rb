@@ -1,3 +1,5 @@
+require 'ronin/open_ports'
+
 App.controllers :open_ports do
 
   provides :html, :xml, :yaml, :json

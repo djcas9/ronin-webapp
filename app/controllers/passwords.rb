@@ -1,3 +1,5 @@
+require 'ronin/password'
+
 App.controllers :passwords do
 
   provides :html, :xml, :yaml, :json
