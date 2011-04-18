@@ -5,8 +5,11 @@
 
 <h4>Ronin Libraries</h4>
 
-<ul>
-<% Ronin::Installation.libraries.each do |lib| %>
-  <li><%= lib %></li>
+<% Ronin::Installation.gems.each_value do |lib| %>
+<div class="ronin-library">
+  <h4><%= lib.name %></h4>
+
+  <p><strong>Version:</strong> <%= lib.version %></p>
+  <blockquote><%= lib.description %></blockquote>
 <% end %>
-</ul>
+</div>
