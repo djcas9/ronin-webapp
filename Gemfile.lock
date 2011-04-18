@@ -51,7 +51,7 @@ GIT
 
 GIT
   remote: http://github.com/ronin-ruby/ronin.git
-  revision: fc0d771089288cf4f99311b4f6e7fa5b4ee08b47
+  revision: 9b472287e33e389a01f701be95dfb0fa9e16bdc1
   specs:
     ronin (1.0.1)
       data_paths (>= 0.2.1, ~> 0.2)
