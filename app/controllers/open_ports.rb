@@ -1,4 +1,4 @@
-require 'ronin/open_ports'
+require 'ronin/open_port'
 
 App.controllers :open_ports do
 
