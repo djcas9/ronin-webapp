@@ -25,6 +25,7 @@ require 'ronin/installation'
 
 # Mounts the core application for this project
 Padrino.mount('app').to('/')
+Padrino.mount('console', :app_class => 'ConsoleApp').to('/console')
 
 #
 # Mounts a sub-app for a Ronin library.
