@@ -24,7 +24,20 @@
 # Mounts the core application for this project
 Padrino.mount('app').to('/')
 
-Padrino.mount('asm', :app_class => 'ASMApp').to('/asm')
-Padrino.mount('web', :app_class => 'WebApp').to('/web')
-Padrino.mount('exploits', :app_class => 'ExploitsApp').to('/exploits')
-Padrino.mount('scanners', :app_class => 'ScannersApp').to('/scanners')
+require 'ronin/installation'
+
+if Ronin::Installation.libraries.include?('ronin-asm')
+  Padrino.mount('asm', :app_class => 'ASMApp').to('/asm')
+end
+
+if Ronin::Installation.libraries.include?('ronin-web')
+  Padrino.mount('web', :app_class => 'WebApp').to('/web')
+end
+
+if Ronin::Installation.libraries.include?('ronin-exploits')
+  Padrino.mount('exploits', :app_class => 'ExploitsApp').to('/exploits')
+end
+
+if Ronin::Installation.libraries.include?('ronin-scanners')
+  Padrino.mount('scanners', :app_class => 'ScannersApp').to('/scanners')
+end
