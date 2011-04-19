@@ -1,7 +1,6 @@
 require 'ronin/scanners'
 
 class ScannersApp < Padrino::Application
-  register Padrino::Mailer
   register Padrino::Helpers
 
   include Ronin::Scanners

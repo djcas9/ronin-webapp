@@ -1,7 +1,6 @@
 require 'ronin/web'
 
 class WebApp < Padrino::Application
-  register Padrino::Mailer
   register Padrino::Helpers
 
   include Ronin::Web
