@@ -1,3 +1,5 @@
+require 'ronin/installation'
+
 ##
 # This file mounts each app in the Padrino project to a specified sub-uri.
 # You can mount additional applications using any of these commands below:
@@ -24,20 +26,27 @@
 # Mounts the core application for this project
 Padrino.mount('app').to('/')
 
-require 'ronin/installation'
+#
+# Mounts a sub-app for a Ronin library.
+#
+# @param [String] name
+#   The name of the ronin library.
+#
+# @param [Hash] options
+#   Additional app options.
+#
+def mount_subapp(name,options)
+  library = "ronin-#{name}"
 
-if Ronin::Installation.libraries.include?('ronin-asm')
-  Padrino.mount('asm', :app_class => 'ASMApp').to('/asm')
+  if Ronin::Installation.libraries.include?(library)
+    path = "/#{name}"
+
+    puts "=> Mounting sub-app for #{library} at #{path} ..."
+    Padrino.mount(name,options).to(path)
+  end
 end
 
-if Ronin::Installation.libraries.include?('ronin-web')
-  Padrino.mount('web', :app_class => 'WebApp').to('/web')
-end
-
-if Ronin::Installation.libraries.include?('ronin-exploits')
-  Padrino.mount('exploits', :app_class => 'ExploitsApp').to('/exploits')
-end
-
-if Ronin::Installation.libraries.include?('ronin-scanners')
-  Padrino.mount('scanners', :app_class => 'ScannersApp').to('/scanners')
-end
+mount_subapp('asm', :app_class => 'ASMApp')
+mount_subapp('web', :app_class => 'WebApp')
+mount_subapp('exploits', :app_class => 'ExploitsApp')
+mount_subapp('scanners', :app_class => 'ScannersApp')
