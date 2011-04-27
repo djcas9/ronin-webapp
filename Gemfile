@@ -13,7 +13,7 @@ gem 'ronin-scanners', '~> 1.0.0', :git => "#{RONIN_URL}/ronin-scanners.git"
 gem 'rack-flash', '~> 0.1'
 
 # Padrino
-PADRINO_VERSION = '~> 0.9.23'
+PADRINO_VERSION = '~> 0.9.25'
 
 gem 'padrino-core',     PADRINO_VERSION
 gem 'padrino-gen',      PADRINO_VERSION
