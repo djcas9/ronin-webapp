@@ -2,12 +2,15 @@ source :rubygems
 
 RONIN_URL = 'http://github.com/ronin-ruby'
 
+gem 'wordlist', '~> 0.2.0', :git => 'http://github.com/sophsec/wordlist.git',
+                            :branch => 'refactor'
+
 # Ronin libraries
-gem 'ronin',          '~> 1.0.1', :git => "#{RONIN_URL}/ronin.git"
-gem 'ronin-asm',      '~> 0.1.0', :git => "#{RONIN_URL}/ronin-asm.git"
-gem 'ronin-web',      '~> 0.3.0', :git => "#{RONIN_URL}/ronin-web.git"
-gem 'ronin-exploits', '~> 1.0.0', :git => "#{RONIN_URL}/ronin-exploits.git"
-gem 'ronin-scanners', '~> 1.0.0', :git => "#{RONIN_URL}/ronin-scanners.git"
+gem 'ronin',          '~> 1.1', :git => "#{RONIN_URL}/ronin.git"
+gem 'ronin-asm',      '~> 0.1', :git => "#{RONIN_URL}/ronin-asm.git"
+gem 'ronin-web',      '~> 0.3', :git => "#{RONIN_URL}/ronin-web.git"
+gem 'ronin-exploits', '~> 1.0', :git => "#{RONIN_URL}/ronin-exploits.git"
+gem 'ronin-scanners', '~> 1.0', :git => "#{RONIN_URL}/ronin-scanners.git"
 
 # Component requirements
 gem 'rack-flash', '~> 0.1'
