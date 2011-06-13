@@ -178,7 +178,7 @@ GEM
       rack
     rack-test (0.5.7)
       rack (>= 1.0)
-    rake (0.8.7)
+    rake (0.9.2)
     ripl (0.4.1)
       bond (~> 0.4.0)
     ripl-auto_indent (0.1.4)
@@ -239,7 +239,7 @@ DEPENDENCIES
   padrino-helpers (~> 0.9.25)
   rack-flash (~> 0.1)
   rack-test (~> 0.5.7)
-  rake (~> 0.8.7)
+  rake (~> 0.8)
   ronin (~> 1.1)!
   ronin-asm (~> 0.1)!
   ronin-exploits (~> 1.0)!
